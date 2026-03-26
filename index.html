@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>TireCheck SEO Audit 2026</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#CC0000;--red-bg:#fff5f5;--red-bd:#fecaca;
+  --navy:#0d2137;--navy2:#1a3a52;
+  --bg:#fff;--bg2:#f8fafc;--bg3:#f1f5f9;
+  --text:#334155;--muted:#94a3b8;--border:#e2e8f0;
+  --g:#CC0000;--g2:#a30000;--g-light:#fff0f0;--g-border:#f5c6c6;
+  --warn:#f59e0b;--warn-bg:#fffbeb;--warn-bd:#fde68a
+}
+.reveal-viewport{background:#fff}
+.reveal .slides{font-family:"Helvetica Neue",-apple-system,sans-serif;color:var(--text)}
+.reveal .slides section{text-align:left;padding:38px 58px 30px;height:100%;overflow:hidden;background:#fff}
+.reveal h1,.reveal h2,.reveal h3,.reveal h4{font-family:"Helvetica Neue",-apple-system,sans-serif;font-weight:800;letter-spacing:-.025em;text-transform:none;color:var(--navy);line-height:1.15;margin:0}
+.reveal h1{font-size:2.6em}
+.reveal h2{font-size:1.8em;margin-bottom:20px}
+.reveal h2 span{color:var(--g)}
+.reveal .progress{color:#CC0000;height:2px}
+.reveal .controls{color:#CC0000}
+.reveal .slide-number{color:var(--muted);font-size:.5em;background:none}
+.topbar{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#CC0000,#e84040)}
+.ey{display:inline-flex;align-items:center;gap:7px;font-size:.6em;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g2);background:var(--g-light);padding:3px 12px;border-radius:100px;margin-bottom:14px}
+.sub{color:var(--text);font-size:.78em;line-height:1.7;margin-top:16px;max-width:500px}
+.meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;padding-top:16px;border-top:1px solid var(--border);font-size:.63em;color:var(--muted)}
+.meta b{color:var(--navy);display:block;margin-bottom:2px}
+.pill{display:inline-block;border-radius:100px;padding:2px 10px;font-size:.65em;font-weight:700}
+.pill.r{background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd)}
+.pill.g{background:var(--g-light);color:var(--g2);border:1px solid var(--g-border)}
+.pill.y{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn-bd)}
+.pill.m{background:var(--bg2);color:var(--muted);border:1px solid var(--border)}
+.note{padding:11px 16px;border-radius:9px;font-size:.7em;color:var(--text);line-height:1.65;margin-top:12px}
+.note.red{background:var(--red-bg);border:1px solid var(--red-bd);border-left:4px solid var(--red)}
+.note.green{background:#fff0f0;border:1px solid #f5c6c6;border-left:4px solid #CC0000}
+.note.grey{background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--muted)}
+.note.warn{background:var(--warn-bg);border:1px solid var(--warn-bd);border-left:4px solid var(--warn)}
+.note strong{color:var(--navy)}
+.scorecard{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.sb{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 14px}
+.sb .si{margin-bottom:8px}
+.sb .val{font-size:2.1em;font-weight:900;color:var(--navy);line-height:1;margin-bottom:6px}
+.sb .val.r{color:var(--red)}.sb .val.y{color:var(--warn)}.sb .val.g{color:var(--g2)}
+.sb .lbl{font-size:.6em;color:var(--muted);line-height:1.45}
+.fi{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.fi li{display:flex;align-items:flex-start;gap:11px;background:var(--bg2);border-left:3px solid var(--muted);border-radius:0 8px 8px 0;padding:10px 13px;font-size:.68em;color:var(--text);line-height:1.55}
+.fi li .ico{flex-shrink:0;margin-top:2px}.fi li .fb{flex:1}
+.fi li.c1{border-color:var(--red);background:var(--red-bg)}
+.fi li.c2{border-color:var(--warn);background:var(--warn-bg)}
+.fi li.c3{border-color:#CC0000;background:#fff8f8}
+.fi li strong{color:var(--navy);display:block;margin-bottom:2px;font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.kt{width:100%;border-collapse:collapse;font-size:.65em;margin-top:8px}
+.kt th{color:var(--muted);font-weight:700;text-align:left;padding:7px 10px;border-bottom:2px solid var(--border);text-transform:uppercase;letter-spacing:.06em;font-size:.82em}
+.kt td{padding:8px 10px;color:var(--text);border-bottom:1px solid var(--border);vertical-align:middle}
+.kt tr:last-child td{border-bottom:none}
+.kt tr:nth-child(even) td{background:var(--bg2)}
+.ca{margin-top:12px;padding:11px 16px;border-radius:9px;font-size:.68em;color:var(--text);line-height:1.6}
+.ca.r{background:var(--red-bg);border:1px solid var(--red-bd);border-left:4px solid var(--red)}
+.ca.y{background:var(--warn-bg);border:1px solid var(--warn-bd);border-left:4px solid var(--warn)}
+.ca.g{background:var(--g-light);border:1px solid var(--g-border);border-left:4px solid var(--g)}
+.ca strong{color:var(--navy)}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:6px}
+.pc{background:var(--bg2);border-radius:10px;border:1px solid var(--border);padding:14px 16px}
+.ph{display:flex;align-items:center;gap:7px;font-size:.62em;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:9px}
+.ph.r{color:var(--red)}.ph.y{color:var(--warn)}.ph.o{color:#CC0000}.ph.m{color:var(--muted)}
+.pc ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.pc ul li{font-size:.65em;color:var(--text);line-height:1.4;padding-left:14px;position:relative}
+.pc ul li::before{content:"›";position:absolute;left:0;color:#a30000;font-weight:700}
+.rm{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.rr{display:grid;grid-template-columns:115px 1fr;gap:14px;align-items:start}
+.rp{background:#fff0f0;border:1px solid #f5c6c6;border-radius:8px;padding:9px 10px;font-size:.62em;font-weight:800;color:#a30000;text-align:center;line-height:1.3}
+.rp span{display:block;font-weight:400;color:var(--muted);font-size:.9em;margin-top:3px}
+.ri{display:flex;flex-direction:column;gap:4px;padding-top:5px}
+.ri li{font-size:.65em;color:var(--text);line-height:1.4;list-style:none;padding-left:14px;position:relative}
+.ri li::before{content:"›";position:absolute;left:0;color:#a30000;font-weight:700}
+.bl{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.br{display:grid;grid-template-columns:1fr 60px 80px 90px;gap:10px;align-items:center;background:var(--bg2);border-radius:8px;padding:9px 13px;font-size:.65em;border:1px solid var(--border)}
+.bh{color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:.58em;background:transparent;border:none}
+.br .dm{color:var(--navy);font-weight:600}.br .dr{text-align:center;font-weight:700;font-size:1.1em}
+.br .tf{text-align:center;color:var(--muted)}.br .ty{text-align:right}
+.cc{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}
+.ck{padding:16px 18px;border-radius:10px;border:1px solid var(--border);background:var(--bg2)}
+.ck h3{font-size:.8em;color:var(--navy);margin-bottom:6px;font-weight:800}
+.ck p{font-size:.68em;color:var(--text);line-height:1.55}
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+<!-- 1 TITLE -->
+<section>
+  <div class="topbar"></div>
+  <img src="https://www.google.com/s2/favicons?domain=tirecheck.online&sz=64" width="48" height="48" style="border-radius:8px;display:block;margin-bottom:16px">
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg> SEO Audit &middot; March 2026</span>
+  <h1>TireCheck<br><span style="color:var(--g)">SEO Audit</span></h1>
+  <p class="sub">A prioritised assessment of tirecheck.online&rsquo;s technical, on-page, and off-page SEO - and the concrete actions needed to achieve organic visibility.</p>
+  <div class="meta">
+    <div><b>Domain</b>tirecheck.online</div>
+    <div><b>Industry</b>Commercial Vehicle TPMS</div>
+    <div><b>Audit Date</b>March 2026</div>
+    <div><b>Scope</b>Technical &middot; On-Page &middot; Off-Page</div>
+  </div>
+</section>
+
+<!-- 2 HEADLINE NUMBERS -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg> Executive Summary</span>
+  <h2>The <span>Headline Numbers</span></h2>
+  <div class="scorecard">
+    <div class="sb">
+      <div class="si"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="val r">31</div><div class="lbl">Domain Rating (Ahrefs)<br>Weak for a 20-year-old company</div>
+    </div>
+    <div class="sb">
+      <div class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+      <div class="val r">0</div><div class="lbl">Organic Keyword Rankings<br>Effectively invisible to Google</div>
+    </div>
+    <div class="sb">
+      <div class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+      <div class="val r">10</div><div class="lbl">Referring Domains<br>Nearly all low-quality or nofollow</div>
+    </div>
+    <div class="sb">
+      <div class="si"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
+      <div class="val y">7</div><div class="lbl">English Blog Posts<br>Thin, minimal internal linking</div>
+    </div>
+  </div>
+  <div class="note red"><strong>Critical situation:</strong> TireCheck has strong brand recognition, a premium product, and 20 years of market presence - but almost no organic search footprint. Zero ranking keywords is a critical signal. The site is technically functional but strategically invisible.</div>
+</section>
+
+<!-- 3 CRITICAL TECHNICAL ISSUES -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Technical SEO &middot; Critical Findings</span>
+  <h2>Four Issues <span>Blocking Organic Growth</span></h2>
+  <ul class="fi">
+    <li class="c1"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><div class="fb"><strong>Zero organic keyword rankings domain-wide</strong>Ahrefs reports 0 rankings for tirecheck.online. Not a data gap - Google assigns no positions to any page. Root cause must be diagnosed via Search Console URL inspection immediately.</div></li>
+    <li class="c1"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><div class="fb"><strong>Hreflang tags missing across all three language versions</strong>EN, DE, and TR variants exist (Polylang) but hreflang is absent. Google may treat all three as duplicate content, suppressing international rankings entirely.</div></li>
+    <li class="c2"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><div class="fb"><strong>No structured data on any product or blog page</strong>Zero schema markup - no Product, FAQ, or Article schema. The site is ineligible for rich results across every SERP feature Google offers.</div></li>
+    <li class="c2"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><div class="fb"><strong>Help centre isolated on a separate subdomain</strong>help.tirecheck.online builds authority independently. Migrating to tirecheck.online/help/ consolidates all backlinks and link equity into the main domain.</div></li>
+  </ul>
+</section>
+
+<!-- 4 ON-PAGE SEO -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg> On-Page SEO</span>
+  <h2>Keyword Targeting <span>&amp; Content Gaps</span></h2>
+  <div class="two">
+    <div>
+      <ul class="fi">
+        <li class="c1" style="font-size:.65em"><span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span><div class="fb"><strong>Homepage H1 is a tagline, not a keyword</strong>"We create connected TPMS solutions" has zero search intent. Replace with: "Commercial Vehicle TPMS Sensors &amp; Fleet Solutions."</div></li>
+        <li class="c1" style="font-size:.65em"><span class="ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span><div class="fb"><strong>Product pages contain only specs - no keyword copy</strong>No benefit-driven content, no long-tail targeting, no internal links. Pages cannot rank for buyer-intent queries.</div></li>
+        <li class="c2" style="font-size:.65em"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><div class="fb"><strong>7 blog posts - thin and siloed</strong>No pillar-cluster structure. Minimal internal linking. Posts cannot compete for high-volume TPMS queries.</div></li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:.62em;color:var(--muted);margin-bottom:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Target H1s by page</p>
+      <table class="kt">
+        <thead><tr><th>Page</th><th>Recommended H1</th></tr></thead>
+        <tbody>
+          <tr><td>Homepage</td><td>Commercial Vehicle TPMS Sensors &amp; Fleet Solutions</td></tr>
+          <tr><td>TPMS Sensors</td><td>TPMS Sensors for Trucks, Trailers &amp; Buses</td></tr>
+          <tr><td>Software</td><td>Fleet Tyre Pressure Monitoring Software</td></tr>
+          <tr><td>Legal Guide</td><td>TPMS Legal Requirements by Country (2026)</td></tr>
+          <tr><td>Solutions</td><td>TPMS Solutions for OEMs, Fleets &amp; Manufacturers</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5 COMPETITOR ANALYSIS -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Indexation Breakdown &middot; TireCheck vs. Competition</span>
+  <h2>On the Sitemap. <span>Not on Google.</span></h2>
+  <div class="two">
+    <div>
+      <p style="font-size:.62em;color:var(--muted);margin-bottom:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Google indexed pages (site: operator, live)</p>
+      <table class="kt" style="font-size:.6em">
+        <thead><tr><th>Domain</th><th>Sitemap pages</th><th>DR</th></tr></thead>
+        <tbody>
+          <tr style="background:#fff0f0">
+            <td><img src="https://www.google.com/s2/favicons?domain=tirecheck.online&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px"><strong>tirecheck.online</strong></td>
+            <td>133</td>
+            <td><span class="pill r">31</span></td>
+          </tr>
+          <tr><td><img src="https://www.google.com/s2/favicons?domain=tyreops.com&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">tyreops.com</td><td>46</td><td><span class="pill y">~10</span></td></tr>
+          <tr><td><img src="https://www.google.com/s2/favicons?domain=revvo.ai&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">revvo.ai</td><td>~106</td><td><span class="pill y">25</span></td></tr>
+          <tr><td><img src="https://www.google.com/s2/favicons?domain=fleetio.com&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">fleetio.com</td><td style="color:var(--g2);font-weight:700">1,376</td><td><span class="pill g">72</span></td></tr>
+          <tr><td><img src="https://www.google.com/s2/favicons?domain=webfleet.com&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">webfleet.com</td><td style="color:var(--g2);font-weight:700">13,800+</td><td><span class="pill g">73</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p style="font-size:.62em;color:var(--muted);margin-bottom:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">TireCheck indexation failures (verified live)</p>
+      <ul class="fi">
+        <li class="c1" style="font-size:.62em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+          <div class="fb"><strong>In sitemap. 200 OK. Not indexed.</strong><span style="display:block;font-family:monospace;font-size:.9em;color:var(--muted);margin-top:3px;word-break:break-all">/tpms-tire-pressure-and-temperature/</span>Page exists, sitemap submitted - Google returns 0 results for this URL. No internal links pointing to it.</div>
+        </li>
+        <li class="c1" style="font-size:.62em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+          <div class="fb"><strong>In sitemap. 200 OK. Not indexed.</strong><span style="display:block;font-family:monospace;font-size:.9em;color:var(--muted);margin-top:3px;word-break:break-all">/tpms-tire-pressure-and-temperature-monitoring/</span>Duplicate of the above. Two near-identical pages competing with each other, neither indexed.</div>
+        </li>
+        <li class="c2" style="font-size:.62em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+          <div class="fb"><strong>Broken links to dead subdomain (404)</strong><span style="display:block;font-family:monospace;font-size:.9em;color:var(--muted);margin-top:3px">tirecheck.odoo.com - 404</span>External links from TireCheck pages point to their old Odoo shop/contact pages, which return 404. Google treats broken outbound links as a quality signal.</div>
+        </li>
+      </ul>
+      <div class="ca r" style="margin-top:10px"><strong>Root cause:</strong> Pages are created and submitted to Google but receive no internal links, carry no keyword-optimised copy, and in some cases duplicate each other. Google crawls them once and deprioritises. Being on the sitemap is not enough.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 OFF-PAGE -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Off-Page SEO &middot; Backlink Gap</span>
+  <h2>The Authority Gap <span>Is Structural</span></h2>
+  <div class="two">
+    <div>
+      <p style="font-size:.63em;color:var(--muted);margin-bottom:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Referring domains comparison</p>
+      <div class="bl">
+        <div class="br bh"><span class="dm">Domain</span><span class="dr">DR</span><span class="tf">Ref. Domains</span><span class="ty">Backlinks</span></div>
+        <div class="br"><span class="dm"><img src="https://www.google.com/s2/favicons?domain=tirecheck.online&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">tirecheck.online</span><span class="dr" style="color:var(--red)">31</span><span class="tf" style="color:var(--red);font-weight:700">10</span><span class="ty" style="color:var(--muted)">~180</span></div>
+        <div class="br"><span class="dm"><img src="https://www.google.com/s2/favicons?domain=tyreops.com&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">tyreops.com</span><span class="dr" style="color:var(--warn)">~10</span><span class="tf">~50 est.</span><span class="ty" style="color:var(--muted)">~200</span></div>
+        <div class="br"><span class="dm"><img src="https://www.google.com/s2/favicons?domain=revvo.ai&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">revvo.ai</span><span class="dr" style="color:var(--warn)">25</span><span class="tf">423</span><span class="ty" style="color:var(--muted)">1.2K</span></div>
+        <div class="br"><span class="dm"><img src="https://www.google.com/s2/favicons?domain=fleetio.com&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">fleetio.com</span><span class="dr" style="color:var(--g2)">72</span><span class="tf" style="color:var(--g2);font-weight:700">3,300</span><span class="ty" style="color:var(--muted)">23K</span></div>
+        <div class="br"><span class="dm"><img src="https://www.google.com/s2/favicons?domain=webfleet.com&sz=32" width="14" height="14" style="border-radius:3px;vertical-align:middle;margin-right:6px">webfleet.com</span><span class="dr" style="color:var(--g2)">73</span><span class="tf" style="color:var(--g2);font-weight:700">3,500</span><span class="ty" style="color:var(--muted)">68K</span></div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:.63em;color:var(--muted);margin-bottom:9px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Priority link sources for TireCheck</p>
+      <ul class="fi">
+        <li class="c3" style="font-size:.65em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><div class="fb"><strong>Industry trade press</strong>Fleet News, Trucking Info, Tyre Press. Each placement = high-DR dofollow link from a topically relevant domain.</div></li>
+        <li class="c3" style="font-size:.65em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><div class="fb"><strong>OEM &amp; fleet partner pages</strong>Request co-marketing links from existing fleet customers and hardware integration partners.</div></li>
+        <li class="c3" style="font-size:.65em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span><div class="fb"><strong>Regulatory &amp; association directories</strong>ETRTO, IRU, and national trucking associations regularly link to tyre safety solution providers.</div></li>
+      </ul>
+      <div class="ca r" style="margin-top:10px"><strong>330&times; fewer referring domains</strong> than Fleetio and Webfleet. No on-page fix closes this gap - backlink building must start in parallel with content.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 CONTENT STRATEGY -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg> Content Strategy</span>
+  <h2>Pillar-Cluster <span>Architecture</span></h2>
+  <div class="two">
+    <div>
+      <p style="font-size:.63em;color:var(--muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Three pillar pages to build</p>
+      <ul class="fi">
+        <li class="c3" style="font-size:.65em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div class="fb"><strong>TPMS for Commercial Vehicles</strong>Core pillar (1,600/mo). Clusters: truck TPMS, trailer TPMS, bus TPMS, fleet management integration.</div></li>
+        <li class="c3" style="font-size:.65em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div class="fb"><strong>TPMS Legal Requirements Guide</strong>Informational pillar (720/mo). Clusters: EU regulation, country-by-country breakdown, compliance checklist.</div></li>
+        <li class="c3" style="font-size:.65em"><span class="ico"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div class="fb"><strong>Tyre Pressure Monitoring Software</strong>Software pillar (480/mo). Clusters: fleet dashboards, real-time alerts, telematics integration.</div></li>
+      </ul>
+    </div>
+    <div>
+      <p style="font-size:.63em;color:var(--muted);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">Q2 2026 content calendar</p>
+      <table class="kt">
+        <thead><tr><th>Month</th><th>Post</th><th>Target KD</th></tr></thead>
+        <tbody>
+          <tr><td>April</td><td>TPMS Legal Requirements 2026</td><td><span class="pill g">Low</span></td></tr>
+          <tr><td>April</td><td>Fleet TPMS Buyer&rsquo;s Guide</td><td><span class="pill y">Medium</span></td></tr>
+          <tr><td>May</td><td>Truck vs. Trailer TPMS: Key Differences</td><td><span class="pill g">Low</span></td></tr>
+          <tr><td>May</td><td>What Is TPMS? Complete Guide</td><td><span class="pill y">Medium</span></td></tr>
+          <tr><td>June</td><td>TPMS Integration with Fleet Telematics</td><td><span class="pill g">Low</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 8 PRIORITY ACTIONS -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Action Plan &middot; Prioritised</span>
+  <h2>What to Fix <span>and When</span></h2>
+  <div class="pg">
+    <div class="pc">
+      <div class="ph r"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Critical - Immediately</div>
+      <ul>
+        <li>Run Search Console URL inspection to find root cause of zero rankings</li>
+        <li>Implement hreflang across all EN, DE, TR pages via Polylang</li>
+        <li>Add Product + Offer schema to all WooCommerce product pages</li>
+        <li>Add Article schema with author metadata to all blog posts</li>
+      </ul>
+    </div>
+    <div class="pc">
+      <div class="ph y"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> High priority - 30 days</div>
+      <ul>
+        <li>Rewrite homepage H1, meta title, and above-the-fold copy</li>
+        <li>Add 200&ndash;300 words of benefit copy + internal links to each product page</li>
+        <li>Rewrite /tpms-legal-requirements/ with FAQPage schema</li>
+        <li>Plan help centre migration to tirecheck.online/help/</li>
+      </ul>
+    </div>
+    <div class="pc">
+      <div class="ph o"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg> Medium priority - 60 days</div>
+      <ul>
+        <li>Publish pillar page: "TPMS for Commercial Vehicles"</li>
+        <li>Build internal linking across all new and existing content</li>
+        <li>Launch trade press outreach for 5 high-DR dofollow links</li>
+        <li>Add FAQ schema to top 3 product category pages</li>
+      </ul>
+    </div>
+    <div class="pc">
+      <div class="ph m"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Ongoing - Monthly</div>
+      <ul>
+        <li>Publish 2 content cluster posts per month (Q2 calendar)</li>
+        <li>Track all target keywords weekly in Search Console + Ahrefs</li>
+        <li>Review and update top-performing posts quarterly</li>
+        <li>Build 2&ndash;3 quality backlinks per month via partnerships</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9 90-DAY ROADMAP -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg> Implementation Roadmap</span>
+  <h2>90-Day <span>Execution Plan</span></h2>
+  <div class="rm">
+    <div class="rr">
+      <div class="rp">Phase 1<span>Days 1&ndash;14</span></div>
+      <ul class="ri">
+        <li>Diagnose zero-ranking root cause via Search Console URL inspection</li>
+        <li>Implement hreflang tags across all 3 language variants</li>
+        <li>Deploy Product + Offer schema on all WooCommerce product pages</li>
+        <li>Deploy Article schema on all 7 existing blog posts</li>
+      </ul>
+    </div>
+    <div class="rr">
+      <div class="rp">Phase 2<span>Days 15&ndash;45</span></div>
+      <ul class="ri">
+        <li>Rewrite homepage and product page copy with keyword-optimised H1s and meta titles</li>
+        <li>Publish "TPMS Legal Requirements 2026" pillar article with FAQPage schema</li>
+        <li>Begin help centre migration (tirecheck.online/help/)</li>
+        <li>Launch first 3 trade press backlink outreach campaigns</li>
+      </ul>
+    </div>
+    <div class="rr">
+      <div class="rp">Phase 3<span>Days 46&ndash;90</span></div>
+      <ul class="ri">
+        <li>Publish 4 cluster posts: Fleet TPMS Buyer&rsquo;s Guide, What Is TPMS?, 2x niche clusters</li>
+        <li>Build internal linking structure across all new and existing content</li>
+        <li>Complete help centre migration with 301 redirects from old subdomain</li>
+        <li>Report on keyword movement; adjust content calendar based on early wins</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 10 NEXT STEPS -->
+<section>
+  <div class="topbar"></div>
+  <span class="ey"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg> Next Steps</span>
+  <h2>Three Actions <span>Before Next Week</span></h2>
+  <ul class="fi">
+    <li class="c1"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><div class="fb"><strong>Open Google Search Console and run a URL inspection on the homepage</strong>This is the single most important diagnostic step. Until you know why Google is not ranking any page, no other action will have full effect.</div></li>
+    <li class="c2"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><div class="fb"><strong>Install a schema plugin (RankMath or Schema Pro) and configure Product schema on one product page</strong>Test with Google&rsquo;s Rich Results Test. Confirm structured data parses correctly before rolling out site-wide.</div></li>
+    <li class="c3"><span class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg></span><div class="fb"><strong>Brief a developer on hreflang implementation for the Polylang multilingual setup</strong>One-day technical task that can immediately recover rankings lost to duplicate content suppression across DE and TR versions.</div></li>
+  </ul>
+  <div class="cc">
+    <div class="ck">
+      <h3>Expected 6-month outcome</h3>
+      <p>If Phase 1 and 2 are executed fully: 50&ndash;200 ranking keywords, 500&ndash;2,000 monthly organic sessions, 3&ndash;5 rich result appearances in Google SERPs.</p>
+    </div>
+    <div class="ck">
+      <h3>12-month potential</h3>
+      <p>With consistent content publication and backlink building: DR 45+, 300+ ranking keywords, 5,000+ monthly organic sessions, and measurable inbound lead generation.</p>
+    </div>
+  </div>
+</section>
+
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>Reveal.initialize({hash:true,slideNumber:true,transition:"fade",transitionSpeed:"fast"});</script>
+</body>
+</html>
